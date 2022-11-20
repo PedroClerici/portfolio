@@ -1,12 +1,19 @@
-// Remove the unit of a length
+@use 'sass:math';
+
+/// Remove the unit of a length
 @function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
-        @return $number / ($number * 0 + 1);
-    }
-    @return $number;
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+  @return $number;
 }
 
-// Convert value to em
-@function em($size, $base-font-size:16px) {
-  @return strip-unit($size) / strip-unit($base-font-size) * 1em;
+/// Convert value to em
+@function em($size, $base-font-size: 16px) {
+  @return math.div(strip-unit($size), strip-unit($base-font-size)) * 1em;
+}
+
+/// Convert value to rem
+@function rem($size, $base-font-size: 16px) {
+  @return math.div(strip-unit($size), strip-unit($base-font-size)) * 1em;
 }
