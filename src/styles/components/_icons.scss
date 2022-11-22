@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+a,
+button {
+  width: rem(24px);
+
+  svg {
+    width: 100%;
+    fill: var(--clr-gray-light);
+  }
+}

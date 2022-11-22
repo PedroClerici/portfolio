@@ -30,3 +30,9 @@ $breakpoints: (
          + 'Please make sure it is defined in `$breakpoints` map.';
   }
 }
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

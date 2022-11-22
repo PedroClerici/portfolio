@@ -3,10 +3,11 @@
 @use 'abstracts/mixins';
 
 @use 'base/reset';
+@use 'base/body';
 @use 'base/typography';
 
-// @use 'layout/';
+@use 'layout/navbar';
 
-// @use 'components/';
+@use 'components/icons';
 
 // @use 'pages/';

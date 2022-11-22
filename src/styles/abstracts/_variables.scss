@@ -14,13 +14,13 @@
   --fs-h3: #{rem(20px)};
 
   // Colors
-  --clr-bg: hsl(225, 10, 8);
-  --clr-bg-light: hsl(225, 7, 11);
-  --clr-bg-lightest: hsl(225, 7, 13);
-  --clr-gray: hsl(240, 1, 45);
-  --clr-gray-light: hsl(220, 1, 48);
-  --clr-gray-lightest: hsl(0, 0, 82);
-  --clr-white: hsl(0, 0, 100);
+  --clr-bg: #121316;
+  --clr-bg-light: #191a1d;
+  --clr-bg-lightest: #202124;
+  --clr-gray: #717173;
+  --clr-gray-light: #797a7c;
+  --clr-gray-lightest: #d0d0d0;
+  --clr-white: #ffffff;
 
   @include respond-to(large) {
     --fs-h1: #{rem(50px)};
