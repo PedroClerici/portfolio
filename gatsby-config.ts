@@ -1,5 +1,4 @@
 import type { GatsbyConfig } from 'gatsby';
-import path from 'path';
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -15,11 +14,47 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          '@components': path.resolve(__dirname, 'src/components'),
-          '@styles': path.resolve(__dirname, 'src/styles'),
-          '@hooks': path.resolve(__dirname, 'src/hooks'),
+          '@components': 'src/components',
+          '@styles': 'src/styles',
+          '@hooks': 'src/hooks',
         },
         extensions: [],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: [`en`, `pt`],
+        defaultLanguage: `en`,
+        siteUrl: `https://example.com`,
+        // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
+        trailingSlash: 'always',
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+        pages: [
+          {
+            matchPath: '/:lang?/blog/:uid',
+            getLanguageFromPath: true,
+            excludeLanguages: ['es'],
+          },
+          {
+            matchPath: '/preview',
+            languages: ['en'],
+          },
+        ],
       },
     },
   ],
