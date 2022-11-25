@@ -1,7 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import Layout from '@components/layout';
+
+import Layout from '@components/Layout';
+
+import '@styles/pages/Index.module.scss';
 
 const Index = () => {
   const { t } = useTranslation();

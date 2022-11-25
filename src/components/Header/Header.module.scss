@@ -1,0 +1,59 @@
+@use '@styles/abstracts/mixins' as *;
+@use '@styles/abstracts/functions' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  height: rem(70px);
+  backdrop-filter: blur(1);
+
+  &__logo {
+    width: rem(36px);
+
+    svg {
+      fill: var(--clr-white);
+    }
+  }
+
+  &__menu-btn {
+    @include flex-center;
+    background: rgba($color: #717173, $alpha: 0.2);
+    margin-left: auto;
+    width: rem(36px);
+    height: rem(36px);
+    border-radius: 50%;
+
+    svg {
+      opacity: 1;
+      width: rem(20px);
+      height: rem(20px);
+    }
+
+    &:hover > svg * {
+      fill: var(--clr-white);
+    }
+  }
+
+  &__nav {
+    display: none;
+    margin-left: auto;
+
+    a {
+      padding-inline: rem(8px);
+    }
+  }
+
+  @include respond-to('large') {
+    a {
+      width: rem(45px);
+    }
+
+    button {
+      display: none;
+    }
+
+    nav {
+      display: block;
+    }
+  }
+}

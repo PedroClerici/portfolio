@@ -1,5 +1,7 @@
 import React from 'react';
-import Navbar from '@components/navbar';
+
+import Header from '@components/Header';
+
 import '@styles/main.scss';
 
 type Props = {
@@ -8,7 +10,7 @@ type Props = {
 
 const Layout = ({ children }: Props) => (
   <>
-    <Navbar />
+    <Header />
     {children}
   </>
 );

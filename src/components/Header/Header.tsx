@@ -1,9 +1,12 @@
-import * as React from 'react';
-import { Icon } from '@components/icons';
+import React from 'react';
 
-const Navbar = () => {
+import Icon from '@components/Icons';
+
+import * as styles from './Header.module.scss';
+
+const Header = () => {
   return (
-    <header className="navbar">
+    <header className={styles.header}>
       <a href="/" className="navbar__logo">
         <Icon name="Logo" />
       </a>
@@ -20,4 +23,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

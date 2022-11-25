@@ -1,5 +1,6 @@
 import React from 'react';
-import { IconLogo, IconMenu } from '@components/icons';
+
+import { IconLogo, IconMenu } from '@components/Icons';
 
 type Props = {
   name: string;
