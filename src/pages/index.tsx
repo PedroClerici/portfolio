@@ -8,9 +8,10 @@ import '@styles/pages/Index.module.scss';
 
 const Index = () => {
   const { t } = useTranslation();
+
   return (
     <Layout>
-      <h1>{t('Test')}</h1>
+      <h1>{t('Hello world!')}</h1>
     </Layout>
   );
 };

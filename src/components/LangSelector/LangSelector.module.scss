@@ -1,0 +1,36 @@
+@use '@styles/abstracts/mixins' as *;
+@use '@styles/abstracts/functions' as *;
+
+.lang-selector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: rem(12px);
+  cursor: pointer;
+
+  .dropdown {
+    position: absolute;
+    padding-block: rem(35px);
+    top: 0;
+    display: none;
+  }
+
+  &:hover {
+    color: var(--clr-white);
+    transition: 0.2s;
+
+    svg {
+      fill: var(--clr-white);
+      transition: 0.2s;
+
+      path {
+        stroke: var(--clr-white);
+        fill: var(--clr-white);
+      }
+    }
+
+    .dropdown {
+      display: block;
+    }
+  }
+}

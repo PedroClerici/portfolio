@@ -23,7 +23,8 @@
   --clr-white: #ffffff;
 
   @include respond-to(large) {
-    --fs-h1: #{rem(50px)};
+    --fs-regular: #{rem(22px)};
+    --fs-h1: #{rem(64px)};
     --fs-h2: #{rem(36px)};
     --fs-h3: #{rem(24px)};
   }

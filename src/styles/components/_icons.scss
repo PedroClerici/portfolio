@@ -8,5 +8,11 @@ button {
   svg {
     width: 100%;
     fill: var(--clr-gray-light);
+    stroke: var(--clr-gray-light);
+
+    path {
+      fill: var(--clr-gray-light);
+      stroke: var(--clr-gray-light);
+    }
   }
 }

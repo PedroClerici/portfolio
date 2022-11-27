@@ -1,23 +1,31 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Icon from '@components/Icons';
+import Button from '@components/Button';
+import LangSelector from '@components/LangSelector';
 
 import * as styles from './Header.module.scss';
 
 const Header = () => {
+  const { t } = useTranslation();
+
   return (
     <header className={styles.header}>
-      <a href="/" className="navbar__logo">
+      <a href="/" className={styles.logo}>
         <Icon name="Logo" />
       </a>
-      <button className="navbar__menu-btn">
+      <button className={styles.menuBtn}>
         <Icon name="Menu" />
       </button>
-      <nav className="navbar__nav">
-        <a href="#">Skills</a>
-        <a href="#">Projects</a>
-        <a href="#">About</a>
-        <a href="#">Resume</a>
+      <nav className={styles.nav}>
+        <a href="#">{t('Skills')}</a>
+        <a href="#">{t('Projects')}</a>
+        <a href="#">{t('About')}</a>
+        <LangSelector />
+        <Button href="#" type="outlined">
+          {t('Resume')}
+        </Button>
       </nav>
     </header>
   );

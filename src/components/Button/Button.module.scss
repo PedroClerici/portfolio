@@ -1,0 +1,24 @@
+@use '@styles/abstracts/variables' as *;
+@use '@styles/abstracts/mixins' as *;
+@use '@styles/abstracts/functions' as *;
+
+.outlined {
+  padding: rem(14px) rem(22px) !important;
+  border-radius: rem(100px);
+  border: 1px solid var(--clr-bg-lightest);
+
+  &:hover {
+    color: white;
+    transition: 0.2s;
+  }
+
+  @include respond-to('large') {
+    padding: rem(12px) rem(32px);
+  }
+}
+
+.filled {
+  padding: rem(10px) rem(18px);
+  border-radius: rem(100px);
+  border: 1px solid var(--clr-bg-lightest);
+}

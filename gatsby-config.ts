@@ -52,6 +52,7 @@ const config: GatsbyConfig = {
           },
           {
             matchPath: '/preview',
+            getLanguageFromPath: true,
             languages: ['en'],
           },
         ],

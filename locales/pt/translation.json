@@ -1,3 +1,9 @@
 {
-  "Test": "Olá mundo!"
+  "Hello world!": "Olá mundo!",
+  "English": "Inglês",
+  "Skills": "Habilidades",
+  "Projects": "Projetos",
+  "About": "Sobre",
+  "Portuguese": "Português",
+  "Resume": "Currículo"
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IconLogo, IconMenu } from '@components/Icons';
+import { IconLogo, IconMenu, IconArrow } from '@components/Icons';
 
 type Props = {
   name: string;
@@ -12,6 +12,8 @@ const Icon = ({ name }: Props) => {
       return <IconLogo />;
     case 'Menu':
       return <IconMenu />;
+    case 'Arrow':
+      return <IconArrow />;
     default:
       throw Error('Icon not found!.');
   }

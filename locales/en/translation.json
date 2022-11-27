@@ -1,3 +1,9 @@
 {
-  "Test": "Hello world!"
+  "Hello world!": "Hello world!",
+  "English": "English",
+  "Skills": "Skills",
+  "Projects": "Projects",
+  "About": "About",
+  "Portuguese": "Portuguese",
+  "Resume": "Resume"
 }
