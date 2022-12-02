@@ -8,6 +8,7 @@ import * as styles from './LangSelector.module.scss';
 const LangSelector = () => {
   const { t } = useTranslation();
   const { language, changeLanguage } = useI18next();
+  const [active, setActive] = useState<boolean>(false);
 
   const languages = [
     { id: 'en', title: t('English') },
@@ -20,16 +21,27 @@ const LangSelector = () => {
   };
 
   return (
-    <button className={styles.langSelector}>
-      {getLanguageTitle(language)}
-      <Icon name="Arrow" />
-      <div className={styles.dropdown}>
-        {languages
-          .filter((languageFiltered) => languageFiltered.id !== language)
-          .map((language) => (
-            <a onClick={() => changeLanguage(language.id)}>{language.title}</a>
-          ))}
+    <button
+      className={styles.langSelector}
+      onClick={() => setActive(!active)}
+      onMouseEnter={() => setActive(true)}
+      onMouseLeave={() => setActive(false)}
+    >
+      <div className={active ? styles.selected : null}>
+        {getLanguageTitle(language)}
+        <Icon name="Arrow" />
       </div>
+      {active && (
+        <div className={styles.dropdown}>
+          {languages
+            .filter((languageFiltered) => languageFiltered.id !== language)
+            .map((language) => (
+              <a onClick={() => changeLanguage(language.id)}>
+                {language.title}
+              </a>
+            ))}
+        </div>
+      )}
     </button>
   );
 };

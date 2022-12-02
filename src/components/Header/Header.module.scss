@@ -4,8 +4,7 @@
 .header {
   display: flex;
   align-items: center;
-  height: rem(70px);
-  backdrop-filter: blur(1);
+  height: rem(80px);
 
   .logo {
     width: rem(36px);
@@ -37,28 +36,5 @@
 
   @include respond-to('large') {
     display: flex;
-  }
-}
-
-.menu-btn {
-  @include flex-center;
-  background: rgba($color: #717173, $alpha: 0.2);
-  margin-left: auto;
-  width: rem(36px);
-  height: rem(36px);
-  border-radius: 50%;
-
-  svg {
-    opacity: 1;
-    width: rem(20px);
-    height: rem(20px);
-  }
-
-  &:hover > svg * {
-    fill: var(--clr-white);
-  }
-
-  @include respond-to('large') {
-    display: none;
   }
 }

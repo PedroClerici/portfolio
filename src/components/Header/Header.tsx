@@ -6,6 +6,7 @@ import Button from '@components/Button';
 import LangSelector from '@components/LangSelector';
 
 import * as styles from './Header.module.scss';
+import Dropdown from '@components/Dropdown';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -15,9 +16,7 @@ const Header = () => {
       <a href="/" className={styles.logo}>
         <Icon name="Logo" />
       </a>
-      <button className={styles.menuBtn}>
-        <Icon name="Menu" />
-      </button>
+      <Dropdown />
       <nav className={styles.nav}>
         <a href="#">{t('Skills')}</a>
         <a href="#">{t('Projects')}</a>
