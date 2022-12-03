@@ -2,9 +2,12 @@
 @use '@styles/abstracts/functions' as *;
 
 .header {
+  position: absolute;
   display: flex;
   align-items: center;
   height: rem(80px);
+
+  width: min(100% - rem(32px), 92.25rem);
 
   .logo {
     width: rem(36px);

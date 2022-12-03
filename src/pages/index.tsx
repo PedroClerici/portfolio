@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Layout from '@components/Layout';
+import Hero from '@components/Sections/Hero';
 
 import '@styles/pages/Index.module.scss';
 
@@ -11,7 +12,7 @@ const Index = () => {
 
   return (
     <Layout>
-      <h1>{t('Hello world!')}</h1>
+      <Hero />
     </Layout>
   );
 };

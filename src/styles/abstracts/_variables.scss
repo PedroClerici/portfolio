@@ -21,10 +21,11 @@
   --clr-gray-light: #797a7c;
   --clr-gray-lightest: #d0d0d0;
   --clr-white: #ffffff;
+  --clr-blue: #547aff;
 
   @include respond-to(large) {
     --fs-regular: #{rem(22px)};
-    --fs-h1: #{rem(64px)};
+    --fs-h1: #{rem(68px)};
     --fs-h2: #{rem(36px)};
     --fs-h3: #{rem(24px)};
   }

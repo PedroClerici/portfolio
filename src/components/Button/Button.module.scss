@@ -6,6 +6,7 @@
   padding: rem(14px) rem(22px) !important;
   border-radius: rem(100px);
   border: 1px solid var(--clr-bg-lightest);
+  width: fit-content;
 
   &:hover {
     color: white;
@@ -13,7 +14,7 @@
   }
 
   @include respond-to('large') {
-    padding: rem(12px) rem(32px);
+    padding: rem(8px) rem(36px);
   }
 }
 

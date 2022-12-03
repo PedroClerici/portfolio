@@ -9,6 +9,8 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-alias-imports`,
@@ -19,13 +21,6 @@ const config: GatsbyConfig = {
           '@hooks': 'src/hooks',
         },
         extensions: [],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/locales`,
-        name: `locale`,
       },
     },
     {
@@ -56,6 +51,13 @@ const config: GatsbyConfig = {
             languages: ['en'],
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
       },
     },
   ],

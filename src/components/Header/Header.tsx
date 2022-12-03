@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 import Icon from '@components/Icons';
 import Button from '@components/Button';
 import LangSelector from '@components/LangSelector';
+import Dropdown from '@components/Dropdown';
 
 import * as styles from './Header.module.scss';
-import Dropdown from '@components/Dropdown';
 
 const Header = () => {
   const { t } = useTranslation();

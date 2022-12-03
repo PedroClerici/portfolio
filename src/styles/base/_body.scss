@@ -2,7 +2,7 @@
 @use '../abstracts/functions' as *;
 
 body {
-  width: min(100% - rem(24px), 91.25rem);
+  width: min(100% - rem(32px), 92.25rem);
   margin-inline: auto;
   background: var(--clr-bg);
 }
