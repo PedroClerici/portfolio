@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import Icon from '@components/Icons';
 
 import * as styles from './Button.module.scss';
 
 type Props = {
-  children: React.ReactNode;
-  icon?: React.ReactNode | null;
+  children: ReactNode;
+  icon?: ReactNode | null;
   href: string;
   type: 'outlined' | 'filled';
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Button from '@components/Button';

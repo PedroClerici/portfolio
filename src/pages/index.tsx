@@ -4,6 +4,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Layout from '@components/Layout';
 import Hero from '@components/Sections/Hero';
+import Skills from '@components/Sections/Skills';
 
 import '@styles/pages/Index.module.scss';
 
@@ -13,6 +14,7 @@ const Index = () => {
   return (
     <Layout>
       <Hero />
+      <Skills />
     </Layout>
   );
 };

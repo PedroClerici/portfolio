@@ -2,13 +2,13 @@
 /// @link https://sass-guidelin.es/#responsive-web-design-and-breakpoints
 $breakpoints: (
   'medium': (
-    min-width: 800px,
+    min-width: 700px,
   ),
   'large': (
-    min-width: 1000px,
+    min-width: 1200px,
   ),
   'huge': (
-    min-width: 1200px,
+    min-width: 1800px,
   ),
 );
 

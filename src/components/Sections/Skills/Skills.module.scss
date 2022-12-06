@@ -1,0 +1,22 @@
+@use '@styles/abstracts/mixins' as *;
+@use '@styles/abstracts/functions' as *;
+
+h2 {
+  text-align: center;
+}
+
+.deck {
+  margin-top: rem(32px);
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: rem(32px);
+
+  @include respond-to('large') {
+    flex-direction: row;
+    margin-top: rem(70px);
+    justify-content: center;
+    gap: rem(32px);
+  }
+}

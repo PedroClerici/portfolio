@@ -1,0 +1,67 @@
+@use '@styles/abstracts/variables' as *;
+@use '@styles/abstracts/mixins' as *;
+@use '@styles/abstracts/functions' as *;
+
+.card {
+  flex: 1 1 0px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(16px);
+  background: var(--clr-bg-light);
+  border-radius: 1rem;
+  padding: rem(40px);
+  margin-inline: rem(32px);
+
+  .icon {
+    @include flex-center;
+    background: var(--clr-bg-lightest);
+    border-radius: 1rem;
+    width: rem(82px);
+    height: rem(82px);
+    padding: rem(20px);
+  }
+
+  .title {
+    color: var(--clr-gray-lightest);
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  &:not(&:hover) {
+    g {
+      stroke: var(--clr-gray-light);
+    }
+
+    path,
+    circle,
+    rect {
+      fill: var(--clr-gray-light);
+    }
+
+    path[fill-rule='evenodd'] {
+      fill: var(--clr-bg-light);
+    }
+  }
+
+  &:hover {
+    g,
+    path,
+    circle,
+    rect {
+      transition: 300ms;
+    }
+
+    path[fill-rule='evenodd'] {
+      fill: var(--clr-bg-light);
+    }
+  }
+
+  @include respond-to('large') {
+    flex-basis: 22.5%;
+    margin-inline: 0;
+  }
+}
